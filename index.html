@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Spatial Policy: Guiding Visuomotor Robotic Manipulation with Spatial-Aware Modeling and Reasoning">
+  <meta name="keywords" content="Spatial Policy, Robotic Manipulation, Spatial-Aware Generation, Embodied AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spatial Policy: Guiding Visuomotor Robotic Manipulation with Spatial-Aware Modeling and Reasoning</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <!-- <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Spatial Policy: Guiding Visuomotor Robotic Manipulation with Spatial-Aware Modeling and Reasoning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Yijun Liu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Yuwei Liu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="#">Yuan Meng</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Jieheng Zhang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Yuwei Zhou</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Ye Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Jiacheng Jiang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Kangye Ji</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Shijia Ge</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Zhi Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Wenwu Zhu</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+            <span class="author-block" style="margin-left: 0.75rem;"><sup>2</sup>Beijing University of Technology</span>
+            <span class="author-block" style="margin-left: 0.75rem;"><sup>3</sup>Guangzhou University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Supplementary Material Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-file-archive"></i>
+                  </span>
+                  <span>Supplementary</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Coming Soon placeholders for now -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video section - commented out for now -->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Spatial Policy</span> enables spatial-aware visuomotor robotic manipulation
+        through explicit spatial modeling and reasoning.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- Results carousel section - commented out for now -->
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-manipulation1">
+          <video poster="" id="manipulation1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/manipulation1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-manipulation2">
+          <video poster="" id="manipulation2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/manipulation2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision-centric hierarchical embodied models have demonstrated strong potential for long-horizon robotic control. However, existing methods lack spatial awareness capabilities, limiting their effectiveness in bridging visual plans to actionable control in complex environments.
+          </p>
+          <p>
+            To address this problem, we propose <strong>Spatial Policy (SP)</strong>, a unified spatial-aware visuomotor robotic manipulation framework via explicit spatial modeling and reasoning. Specifically, we first design a spatial-conditioned embodied video generation module to model spatially guided predictions through a spatial plan table. Then, we propose a spatial-based action prediction module to infer executable actions with coordination. Finally, we propose a spatial reasoning feedback policy to refine the spatial plan table via dual-stage replanning.
+          </p>
+          <p>
+            Extensive experiments show that SP significantly outperforms state-of-the-art baselines, achieving a <strong>33.0% average improvement</strong> over the best baseline. With an <strong>86.7% average success rate</strong> across 11 diverse tasks, SP substantially enhances the practicality of embodied models for robotic control applications.
+          </p>
+          <p>
+            <strong>Keywords:</strong> robotic manipulation, spatial-aware generation, spatial-aware reasoning, embodied AI, diffusion models
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Main Figure -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <img src="./static/main.png"
+             class="interpolation-image"
+             alt="Spatial Policy method overview"
+             style="max-width: 100%; height: auto;"/>
+        <p class="is-size-6 has-text-grey" style="margin-top: 0.5rem;">
+          Overview of the Spatial Policy framework for spatial-aware visuomotor robotic manipulation.
+        </p>
+      </div>
+    </div>
+    <!--/ Main Figure -->
+
+    <!-- GIF Results under main figure -->
+    <section class="section">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">Embodied Video Generation Result</h2>
+        <div class="gif-scroll-wrapper">
+          <h3 class="title is-5">Corner</h3>
+          <div class="gif-scroll-row" id="corner-row">
+            <!-- corner gifs (no labels in first two rows) -->
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/assembly-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/basketball-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/button-press-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/button-press-topdown-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/door-close-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/door-open-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/faucet-close-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/faucet-open-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/hammer-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/handle-press-corner.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/shelf-place-corner.gif"></div></div>
+          </div>
+          <h3 class="title is-5">Corner2</h3>
+          <div class="gif-scroll-row" id="corner2-row">
+            <!-- corner2 gifs (no labels) -->
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/assembly-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/basketball-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/button-press-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/button-press-topdown-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/door-close-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/door-open-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/faucet-close-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/faucet-open-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/hammer-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/handle-press-corner2.gif"></div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/shelf-place-corner2.gif"></div></div>
+          </div>
+          <h3 class="title is-5">Corner3</h3>
+          <div class="gif-scroll-row" id="corner3-row">
+            <!-- corner3 gifs (keep labels here) -->
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/assembly-corner3.gif"></div><div class="gif-label">assembly</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/basketball-corner3.gif"></div><div class="gif-label">basketball</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/button-press-corner3.gif"></div><div class="gif-label">button-press</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/button-press-topdown-corner3.gif"></div><div class="gif-label">button-press-topdown</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/door-close-corner3.gif"></div><div class="gif-label">door-close</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/door-open-corner3.gif"></div><div class="gif-label">door-open</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/faucet-close-corner3.gif"></div><div class="gif-label">faucet-close</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/faucet-open-corner3.gif"></div><div class="gif-label">faucet-open</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/hammer-corner3.gif"></div><div class="gif-label">hammer</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/handle-press-corner3.gif"></div><div class="gif-label">handle-press</div></div>
+            <div class="gif-item"><div class="gif-crop-box"><img src="./static/shelf-place-corner3.gif"></div><div class="gif-label">shelf-place</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Paper video - commented out for now -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Visual Effects and Demos sections - commented out for now -->
+    <!-- <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <!-- <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Spatial-Aware Manipulation</h2>
+          <p>
+            Using <i>Spatial Policy</i> you can achieve precise robotic manipulation with spatial awareness.
+            This demonstrates the effectiveness of our spatial reasoning capabilities.
+          </p>
+          <video id="spatial-manipulation" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/spatial-manipulation.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      <!--/ Visual Effects. -->
+
+      <!-- Results. -->
+      <!-- <div class="column">
+        <h2 class="title is-3">Experimental Results</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Our method achieves significant improvements in success rates across diverse robotic manipulation tasks,
+              demonstrating the effectiveness of spatial-aware modeling and reasoning.
+            </p>
+            <video id="results-video" controls playsinline height="100%">
+              <source src="./static/videos/results.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+    <!--/ Results. -->
+
+    <!-- Animation and Method sections - commented out for now -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Overview</h2>
+
+        <!-- Spatial Modeling. -->
+        <!-- <h3 class="title is-4">Spatial-Conditioned Video Generation</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our spatial-conditioned embodied video generation module models spatially guided predictions 
+            through a spatial plan table, enabling precise spatial understanding and control.
+          </p>
+        </div> -->
+
+        <!-- Action Prediction. -->
+        <!-- <h3 class="title is-4">Spatial-Based Action Prediction</h3>
+        <div class="content has-text-justified">
+          <p>
+            The spatial-based action prediction module infers executable actions with coordination,
+            bridging the gap between visual planning and actionable control.
+          </p>
+        </div> -->
+
+        <!-- Spatial Reasoning. -->
+        <!-- <h3 class="title is-4">Spatial Reasoning Feedback Policy</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our spatial reasoning feedback policy refines the spatial plan table via dual-stage replanning,
+            continuously improving the spatial understanding and manipulation capabilities.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="method-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/method.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+
+      <!-- </div>
+    </div> -->
+    <!--/ Method Overview. -->
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Work</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Our work builds upon several important areas of research in embodied AI and robotic manipulation.
+          </p>
+          <p>
+            <strong>Vision-Language-Action (VLA) Models:</strong> Recent works like RT-1, RT-2, and PaLM-E have shown promising results in combining vision and language understanding for robotic control.
+          </p>
+          <p>
+            <strong>Spatial Reasoning in Robotics:</strong> Works on spatial understanding and reasoning have been crucial for robotic navigation and manipulation tasks.
+          </p>
+          <p>
+            <strong>Hierarchical Planning:</strong> Methods that decompose complex tasks into spatial plans and low-level actions have shown effectiveness in long-horizon manipulation tasks.
+          </p>
+          <p>
+            <strong>Diffusion Models for Robotics:</strong> Recent applications of diffusion models to robotic control, including trajectory generation and action prediction, have demonstrated strong performance across various manipulation tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section> -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{liu2025spatialpolicy,
+  author    = {Liu, Yijun and Liu, Yuwei and Meng, Yuan and Zhang, JieHeng and Zhou, Yuwei and Li, Ye and Jiang, Jiacheng and Ji, Kangye and Ge, Shijia and Wang, Zhi and Zhu, Wenwu},
+  title     = {Spatial Policy: Guiding Visuomotor Robotic Manipulation with Spatial-Aware Modeling and Reasoning},
+  journal   = {arXiv preprint},
+  year      = {2025}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="#">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="#" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website template is based on <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            We thank the authors for sharing their website template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+/* 共享一个横向滚动条的外层容器 */
+.gif-scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px; /* 让滚动条不挡内容 */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 内部每一行自身不产生滚动，由外层统一滚动 */
+.gif-scroll-wrapper .gif-scroll-row {
+  overflow: visible;      /* 由外层滚动 */
+}
+
+/* 将三行的内容宽度保持一致，外层滚动控制 */
+.gif-scroll-wrapper .gif-scroll-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* 横向滚动容器 */
+.gif-scroll-row {
+  display: flex;
+  flex-wrap: nowrap;          /* 禁止换行，横向排布 */
+  overflow-x: auto;           /* 横向滚动 */
+  overflow-y: hidden;
+  gap: 16px;                  /* 卡片间距 */
+  padding-bottom: 10px;       /* 给滚动条留空间 */
+  -webkit-overflow-scrolling: touch; /* iOS 惯性滚动 */
+  scroll-behavior: smooth;
+}
+
+/* 子项固定宽度，防止被压缩 */
+.gif-item {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.gif-crop-box {
+  width: 171px;
+  height: 171px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 0;
+  box-shadow: none;
+  background: #fff; /* 避免容器自身出现黑边 */
+}
+.gif-crop-box img {
+  width: 100%;                    /* 统一 128x128 视窗 */
+  height: 100%;
+  object-fit: cover;              /* 先按比例填满容器 */
+  object-position: center;        /* 居中对齐 */
+  transform: scale(var(--gif-scale, 2.55)) translateY(var(--gif-shift-y, 0%)); /* 放大一些并下移 */
+  transform-origin: center center;
+  border-radius: 0;
+}
+.gif-label {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #444;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
