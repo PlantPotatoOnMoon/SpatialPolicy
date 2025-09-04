@@ -1,11 +1,9 @@
 ## VideoAgent
 
-The official codebase for training video policies in VideoAgent
-
-NEWS: We have released new set of checkpoints for MetaWorld with better performance.
+The official codebase for training video policies in SpatialPolicy
 
 This repository contains the code for training video policies presented in our work   
-[VideoAgent: Self improving video generation](https://arxiv.org/abs/2508.15874)  
+[Spatial Policy: Guiding Visuomotor Robotic Manipulation with Spatial-Aware Modeling and Reasoning](https://arxiv.org/abs/2508.15874)  
 
 
 [website](https://plantpotatoonmoon.github.io/SpatialPolicy) | [paper](https://arxiv.org/abs/2508.15874) | [arXiv](https://arxiv.org/abs/2508.15874) | [experiment repo]()
@@ -41,7 +39,7 @@ For Meta-World experiments, run
 ```bash
 cd flowdiffusion
 python train_mw_feedback.py --mode train
-# or python train_mw.py -m train
+# or python train_mw_feedback.py -m train
 ```
 
 or run with `accelerate`
@@ -86,14 +84,8 @@ will upload soon
 ### Bridge
 will upload soon
 
-Download and put the .pt file in `results/[environment]` folder. The resulting directory structure should be `results/{mw, thor, bridge}/model-[x].pt`, for example `results/mw/model-305.pt`
+Download and put the .pt file in `results/[environment]` folder. The resulting directory structure should be `results/{mw, thor, bridge}/model-[x].pt`, for example `results/mw/model-1.pt`
 
-Or use `download.sh`
-```bash
-./download.sh metaworld
-# ./download.sh ithor
-# ./download.sh bridge
-```
 
 After this, you can use argument `-c [x]` to resume training or inference with our checkpoint. For example:  
 ```bash
