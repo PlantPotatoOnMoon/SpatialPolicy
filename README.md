@@ -8,6 +8,7 @@ This repository contains the code for training video policies presented in our w
 
 [website](https://plantpotatoonmoon.github.io/SpatialPolicy) | [paper](https://arxiv.org/abs/2508.15874) | [arXiv](https://arxiv.org/abs/2508.15874) | [experiment repo]()
 
+![Framework](images/framework.png)
 
 ## Getting started  
 
