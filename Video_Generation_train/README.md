@@ -84,18 +84,6 @@ will upload soon
 ### Bridge
 will upload soon
 
-Download and put the .pt file in `results/[environment]` folder. The resulting directory structure should be `results/{mw, thor, bridge}/model-[x].pt`, for example `results/mw/model-1.pt`
-
-
-After this, you can use argument `-c [x]` to resume training or inference with our checkpoint. For example:  
-```bash
-python train_mw_feedback.py --mode train -c 305
-```
-Or  
-```bash
-python train_mw_feedback.py --mode inference -c 3053083 -p ../examples/assembly.gif -t assembly
-```
-
 ## Acknowledgements
 
 This codebase is modified from the following repositories:  
