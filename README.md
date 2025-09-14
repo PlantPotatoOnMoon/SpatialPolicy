@@ -1,4 +1,4 @@
-## VideoAgent
+## Spatial Policy
 
 The official codebase for training video policies in SpatialPolicy
 
