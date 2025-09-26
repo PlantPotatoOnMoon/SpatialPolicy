@@ -48,8 +48,17 @@ body {
   box-shadow: none;
   background: #fff; /* 避免容器自身出现黑边 */
 }
-.gif-crop-box img {
-  width: 100%;                    /* 统一 128x128 视窗 */
+
+/* 为THOR网格视频创建新的样式 */
+.thor-grid-video {
+  width: 220px;
+  height: 220px;
+  object-fit: cover; /* 填满容器，可能会裁剪 */
+}
+
+.gif-crop-box img,
+.gif-crop-box video {
+  width: 100%;                    /* 统一视窗 */
   height: 100%;
   object-fit: cover;              /* 先按比例填满容器 */
   object-position: center;        /* 居中对齐 */
@@ -61,6 +70,29 @@ body {
   margin-top: 6px;
   font-size: 1rem;
   color: #444;
+}
+
+img.thor-compare-gif {
+  width: 100%;
+  max-width: 240px;
+}
+.gif-label {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Ensure compare GIFs inside gif-crop-box are not enlarged by the general transform */
+.gif-crop-box img.thor-compare-gif {
+  transform: none !important;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+img.thor-compare-gif {
+  width: 100%;
+  max-width: 240px;
 }
 
 
@@ -89,12 +121,10 @@ body {
 }
 
 
-.publication-title {
-}
+.publication-title { display: block; }
 
 .publication-banner {
   max-height: parent;
-
 }
 
 .publication-banner video {
@@ -105,30 +135,24 @@ body {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
-}
-
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
 }
 
 .publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
-}
-
-.publication-authors {
+  color: #ff3860;
+  width: fit-content;
+  font-weight: bolder;
 }
 
 .publication-authors a {
@@ -136,39 +160,29 @@ body {
 }
 
 .publication-authors a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .author-block {
   display: inline-block;
 }
 
-.publication-banner img {
-}
-
-.publication-authors {
-  /*color: #4286f4;*/
-}
-
 .publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 
-    overflow: hidden;
-    border-radius: 10px !important;
+  overflow: hidden;
+  border-radius: 10px !important;
 }
 
 .publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.publication-body img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .results-carousel {
@@ -199,8 +213,7 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-video-column {
-}
+.interpolation-video-column { display: block; }
 
 .interpolation-panel .slider {
   margin: 0 !important;
