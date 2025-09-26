@@ -34,6 +34,23 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
+  <!-- Force THOR GIF sizing -->
+  <style>
+    /* Ensure THOR GIFs are 120x120 */
+    .gif-crop-box {
+      width: 120px !important;
+      height: 120px !important;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    .gif-crop-box img[src*="/static/thor/"] {
+      width: 120px !important;
+      height: 120px !important;
+      object-fit: cover !important;
+      display: block;
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -335,83 +352,87 @@
     </section>
 
     <!-- THOR Dataset Visualization 移动到此处 -->
+    <!-- 插入 metaworldavdcmp.jpg（宽度 1000px） -->
+    <div style="text-align:center;margin-bottom:1rem;">
+      <img src="./static/metaworldavdcmp.jpg" alt="Metaworld AVDC Comparison" style="width:1000px;max-width:100%;height:auto;">
+    </div>
     <section class="section">
       <div class="container is-max-desktop">
         <h2 class="title is-4">THOR Result Visualization</h2>
 
-        <!-- 12task_example 3x4 网格展示 -->
+        <!-- 12task_example 2x6 网格展示 -->
         <h3 class="subtitle is-5">12 Tasks Generation Examples</h3>
                 <div class="columns is-multiline is-mobile" style="max-width: 980px; margin: 0 auto;">
           <!-- 使用 GIF 图片展示（使用与 corner3 相同的 gif-item 布局并保留标签） -->
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Blinds.gif" alt="Blinds"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Blinds.gif" alt="Blinds" style="height:120px;width:120px;"></div>
               <div class="gif-label">Blinds</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Bread.gif" alt="Bread"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Bread.gif" alt="Bread" style="height:120px;width:120px;"></div>
               <div class="gif-label">Bread</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/DeskLamp.gif" alt="DeskLamp"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/DeskLamp.gif" alt="DeskLamp" style="height:120px;width:120px;"></div>
               <div class="gif-label">DeskLamp</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Laptop.gif" alt="Laptop"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Laptop.gif" alt="Laptop" style="height:120px;width:120px;"></div>
               <div class="gif-label">Laptop</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Mirror.gif" alt="Mirror"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Mirror.gif" alt="Mirror" style="height:120px;width:120px;"></div>
               <div class="gif-label">Mirror</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Painting.gif" alt="Painting"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Painting.gif" alt="Painting" style="height:120px;width:120px;"></div>
               <div class="gif-label">Painting</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Pillow.gif" alt="Pillow"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Pillow.gif" alt="Pillow" style="height:120px;width:120px;"></div>
               <div class="gif-label">Pillow</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/SoapBar.gif" alt="SoapBar"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/SoapBar.gif" alt="SoapBar" style="height:120px;width:120px;"></div>
               <div class="gif-label">SoapBar</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Spatula.gif" alt="Spatula"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Spatula.gif" alt="Spatula" style="height:120px;width:120px;"></div>
               <div class="gif-label">Spatula</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Television.gif" alt="Television"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Television.gif" alt="Television" style="height:120px;width:120px;"></div>
               <div class="gif-label">Television</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/Toaster.gif" alt="Toaster"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/Toaster.gif" alt="Toaster" style="height:120px;width:120px;"></div>
               <div class="gif-label">Toaster</div>
             </div>
           </div>
-          <div class="column is-one-quarter" style="text-align:center;">
+          <div class="column is-one-sixth" style="text-align:center;">
             <div class="gif-item">
-              <div class="gif-crop-box"><img src="./static/thor/12task_example/ToiletPaper.gif" alt="ToiletPaper"></div>
+              <div class="gif-crop-box" style="width:120px;margin:0 auto;"><img src="./static/thor/12task_example/ToiletPaper.gif" alt="ToiletPaper" style="height:120px;width:120px;"></div>
               <div class="gif-label">ToiletPaper</div>
             </div>
           </div>
