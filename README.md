@@ -5,6 +5,7 @@ The official codebase for training video policies in SpatialPolicy
 This repository contains the code for training video policies presented in our work   
 [Spatial Policy: Guiding Visuomotor Robotic Manipulation with Spatial-Aware Modeling and Reasoning](https://arxiv.org/abs/2508.15874)  
 
+NEWS: We have released another repository for running our Meta-World and iTHOR experiments (https://github.com/PlantPotatoOnMoon/SP_exp)!
 
 [website](https://plantpotatoonmoon.github.io/SpatialPolicy) | [paper](https://arxiv.org/abs/2508.15874) | [arXiv](https://arxiv.org/abs/2508.15874) | [experiment repo]()
 
@@ -77,12 +78,12 @@ python train_mw_feedback.py --mode inference -c 1 -p ../examples/assembly.gif -t
 
 We also provide checkpoints of the models described in our experiments as following.   
 ### Meta-World
-[SpatialPolicy](https://huggingface.co/vivi040505/SPatialPolicy) 
+[SpatialPolicy](https://huggingface.co/Junjun2333/SpatialPolicy/tree/main) 
 
 ### iThor
 will upload soon
 
-### Bridge
+### Prototype
 will upload soon
 
 ## Acknowledgements
