@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 ## Dataset structure
 
-The pytorch dataset classes are defined in `flowdiffusion/datasets_feedback.py`
+The pytorch dataset classes are defined in `flowdiffusion/datasets.py`
 
 
 ## Training models
@@ -40,17 +40,17 @@ The pytorch dataset classes are defined in `flowdiffusion/datasets_feedback.py`
 For Meta-World experiments, run
 ```bash
 cd flowdiffusion
-python train_mw_feedback.py --mode train
-# or python train_mw_feedback.py -m train
+python train_mw.py --mode train
+# or python train_mw.py -m train
 ```
 
 or run with `accelerate`
 ```bash
-accelerate launch train_mw_feedback.py
+accelerate launch train_mw.py
 ```
 
 For iTHOR experiments, run `train_thor.py` instead of `train_mw.py`  
-For bridge experiments, run `train_bridge.py` instead of `train_mw.py`  
+For real experiments, run `train_real.py` instead of `train_mw.py`  
 will upload soon
 
 The trained model should be saved in `../results` folder  
@@ -71,19 +71,19 @@ Use the following arguments for inference
 
 For example:  
 ```bash
-python train_mw_feedback.py --mode inference -c 1 -p ../examples/assembly.gif -t assembly -g 2 -n 20
+python train_mw.py --mode inference -c 4652204 -p ../examples/assembly.gif -t assembly -g 2 -n 20
 ```
 
 ## Pretrained models 
 
 We also provide checkpoints of the models described in our experiments as following.   
 ### Meta-World
-[SpatialPolicy](https://huggingface.co/Junjun2333/SpatialPolicy/tree/main) 
+[SpatialPolicy/Meta-World](https://huggingface.co/Junjun2333/SpatialPolicy/tree/main/ckpts/metaworld/video)
 
 ### iThor
-will upload soon
+[SpatialPolicy/iThor](https://huggingface.co/Junjun2333/SpatialPolicy/tree/main/ckpts/thor/video)
 
-### Prototype
+### Real
 will upload soon
 
 ## Acknowledgements
