@@ -1,0 +1,61 @@
+=== Distance Info ===
+{
+  "grippers": {
+    "left_gripper": {
+      "2D": [
+        148,
+        100
+      ],
+      "3D": [
+        0.05803378,
+        0.09672297,
+        -1.40105939
+      ],
+      "name": "left_gripper"
+    },
+    "right_gripper": {
+      "2D": [
+        140,
+        95
+      ],
+      "3D": [
+        0.09641913,
+        0.12052391,
+        -1.39665818
+      ],
+      "name": "right_gripper"
+    }
+  },
+  "targets": {
+    "assembly_left": {
+      "2D": [
+        142,
+        103
+      ],
+      "3D": [
+        0.09071102,
+        0.08567152,
+        -1.4599719
+      ],
+      "name": "assembly_left"
+    }
+  },
+  "distances": [
+    {
+      "distance": 0.0683,
+      "gripper": "left_gripper",
+      "target": "assembly_left"
+    },
+    {
+      "distance": 0.0725,
+      "gripper": "right_gripper",
+      "target": "assembly_left"
+    }
+  ]
+}
+
+=== Feedback Plan ===
+Plan:
+1. move [1, -1, -1] [0.07]
+2. grasp [0, 0, 0] [0.00]
+3. pull [0, 0, 1] [0.06]

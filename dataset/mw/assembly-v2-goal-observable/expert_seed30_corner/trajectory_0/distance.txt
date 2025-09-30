@@ -1,0 +1,7 @@
+=== sample.npz First Frame Info ===
+Gripper ID 31: 2D=(148, 100), 3D=[ 0.05803378  0.09672297 -1.40105939]
+Gripper ID 33: 2D=(140, 95), 3D=[ 0.09641913  0.12052391 -1.39665818]
+Target ID 37: 2D=(142, 103), 3D=[ 0.09071102  0.08567152 -1.4599719 ]
+Distance gripper 31 to target 37: 0.0683 m
+Distance gripper 33 to target 37: 0.0725 m
+Target ID 38: 2D=None, 3D=None

@@ -1,0 +1,6 @@
+forward 1.5
+right 90
+forward 1.75
+left 90
+forward 1.75
+done 0

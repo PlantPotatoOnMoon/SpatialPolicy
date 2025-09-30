@@ -1,0 +1,5 @@
+move forward 0.2
+grasp forward 0.05
+lift up 0.1
+move forward 0.15
+release down 0.05
