@@ -1,0 +1,70 @@
+cff-version: 1.2.0
+message: If you use SpatialPolicy code or pretrained models, please cite the paper below.
+type: software
+title: 'SpatialPolicy: Spatial-Aware Video Policies for Robotic Manipulation'
+authors:
+- family-names: Liu
+  given-names: Yijun
+- family-names: Liu
+  given-names: Yuwei
+- family-names: Meng
+  given-names: Yuan
+- family-names: Zhang
+  given-names: Jieheng
+- family-names: Zhou
+  given-names: Yuwei
+- family-names: Li
+  given-names: Ye
+- family-names: Jiang
+  given-names: Jiacheng
+- family-names: Ji
+  given-names: Kangye
+- family-names: Ge
+  given-names: Shijia
+- family-names: Wang
+  given-names: Zhi
+- family-names: Zhu
+  given-names: Wenwu
+repository-code: https://github.com/PlantPotatoOnMoon/SpatialPolicy
+url: https://plantpotatoonmoon.github.io/SpatialPolicy/
+keywords:
+- robotic manipulation
+- visuomotor control
+- spatial reasoning
+- video policies
+- video generation
+- diffusion models
+- robot learning
+- embodied AI
+- Meta-World
+- iTHOR
+preferred-citation:
+  type: article
+  title: 'Spatial Policy: Guiding Visuomotor Robotic Manipulation with Spatial-Aware Modeling and Reasoning'
+  authors:
+  - family-names: Liu
+    given-names: Yijun
+  - family-names: Liu
+    given-names: Yuwei
+  - family-names: Meng
+    given-names: Yuan
+  - family-names: Zhang
+    given-names: Jieheng
+  - family-names: Zhou
+    given-names: Yuwei
+  - family-names: Li
+    given-names: Ye
+  - family-names: Jiang
+    given-names: Jiacheng
+  - family-names: Ji
+    given-names: Kangye
+  - family-names: Ge
+    given-names: Shijia
+  - family-names: Wang
+    given-names: Zhi
+  - family-names: Zhu
+    given-names: Wenwu
+  journal: arXiv
+  year: 2025
+  doi: 10.48550/arXiv.2508.15874
+  url: https://arxiv.org/abs/2508.15874
